@@ -60,7 +60,7 @@
     "imagemin-svgo": "^10.0.1",
     "mini-css-extract-plugin": "^2.4.4",
     "postcss": "^8.3.11",
-    "postcss-loader": "^8.1.0",
+    "postcss-loader": "^8.1.1",
     "sass": "^1.50.1",
     "sass-lint": "^1.13.1",
     "sass-loader": "^14.1.0",
