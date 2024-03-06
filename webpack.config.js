@@ -8,6 +8,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 const environment = require('./configuration/environment');
 
@@ -21,6 +22,7 @@ const templateFiles = fs
 
 const htmlPluginEntries = templateFiles.map(
   (template) =>
+    // eslint-disable-next-line implicit-arrow-linebreak
     new HTMLWebpackPlugin({
       inject: true,
       hash: false,
@@ -40,6 +42,28 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(scss)$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: () => [autoprefixer],
+              },
+            },
+          },
+          {
+            loader: 'sass-loader',
+          },
+        ],
+      },
       {
         test: /\.((c|sa|sc)ss)$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
