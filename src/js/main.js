@@ -26,8 +26,12 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('currentYear').textContent = getCurrentYear();
 });
 
+// eslint-disable-next-line vars-on-top
+var scrollTimeout;
+
 window.onscroll = function () {
-  scrollFunction();
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(scrollFunction, 100); // Adjust the debounce delay as needed
 };
 
 function scrollFunction() {
@@ -37,11 +41,3 @@ function scrollFunction() {
     document.getElementById('scrollspyNav').style.padding = '50px 10px';
   }
 }
-
-// window.scroll(function () {
-//   if (document.scrollTop() > 50) {
-//     'navbar'.addClass('shrink');
-//   } else {
-//     'navbar'.removeClass('shrink');
-//   }
-// });
