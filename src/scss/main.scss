@@ -121,7 +121,7 @@
   --bs-form-valid-color: #198754;
   --bs-form-valid-border-color: #198754;
   --bs-form-invalid-color: #dc3545;
-  --bs-form-invalid-border-color: #dc3545
+  --bs-form-invalid-border-color: #dc3545;
 }
 
 [data-bs-theme=dark] {
@@ -199,8 +199,8 @@ body {
 }
 
 .bsb-tpl-header-sticky.sticky-top.stuck .navbar {
-  max-height: 72px;
-  min-height: 72px;
+  max-height: 72px !important;
+  min-height: 72px !important;
   transition: all .5s;
 }
 
@@ -261,11 +261,5 @@ body {
 
 .navbar {
   min-height: 72px;
-  transition: all .5s;
-}
-
-.bsb-tpl-header-sticky.sticky-top.stuck .navbar {
-  max-height: 72px !important;
-  min-height: 72px !important;
   transition: all .5s;
 }

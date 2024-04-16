@@ -9,7 +9,7 @@
     "> 5%"
   ],
   "engines": {
-    "node": ">=18.12.0"
+    "node": ">=20.12.2"
   },
   "keywords": [
     "ledger",
