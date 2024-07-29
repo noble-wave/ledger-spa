@@ -62,7 +62,7 @@
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^10.0.1",
     "mini-css-extract-plugin": "^2.9.0",
-    "postcss": "^8.4.38",
+    "postcss": "^8.4.40",
     "postcss-loader": "^8.1.1",
     "sass": "^1.77.8",
     "sass-lint": "^1.13.1",
